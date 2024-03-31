@@ -1,0 +1,78 @@
+@import '../../styles.scss';
+
+.top_menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: $whiteColor;
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  @include breakpoint(sm){
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__user_info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    &__icon-button {
+      /* Common styles for the button */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      /* Indicate clickable behavior */
+      transition: background-color 0.2s ease;
+      &__badge{
+        position: fixed;
+        top: 43px;
+        background-color: red;
+        color: white;
+        font-size: 7px;
+        left: 252px;
+        padding: 1px 4px;
+        border-radius: 50%;
+        @include breakpoint(sm){
+           top: 124px;
+           left: 337px;
+         }
+      }
+    }
+    &__icon-button:hover {
+      background-color: rgba(0, 0, 0, 0.1);  /* Optional subtle hover background */
+    }
+
+    &__userName {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      &__shorten {
+        border-radius: 50%;
+        background: #024194;
+        color: #ffffff;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+        padding: 6px;
+        text-align: center;
+      }
+
+      &__fullname {
+        font-size: 14px;
+      }
+
+      &__arrow {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/styles/global/variables';
+@import './assets/styles/global/mixins';
+
+
+@font-face {
+  font-family: "LamaSans_Regular";
+  src: url("./assets/fonts/LamaSans-Regular.woff2") format("woff2"),
+    url("./assets/fonts/LamaSans-Regular.woff") format("woff");
+  font-weight: regular;
+  font-style: normal;
+}
+
+*{
+  font-family: $font_regular;
+}
