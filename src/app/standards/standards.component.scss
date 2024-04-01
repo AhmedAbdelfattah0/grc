@@ -1,0 +1,20 @@
+@import '../../styles.scss';
+
+
+.standerds-container {
+  height: 50vh;
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: $whiteColor;
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.16);
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: right;
+    color: #18AFB8;
+  }
+}

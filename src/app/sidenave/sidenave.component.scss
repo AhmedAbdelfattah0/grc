@@ -3,13 +3,13 @@
 .sideNave-Container{
 
     padding: 2rem;
-  width: 236px;
+  // width: 17.36vw;
   height: 100vh;
   position: fixed;
   background-color: $whiteColor;
-  -webkit-box-shadow: $box-shadow;
-  -moz-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow-right;
+  -moz-box-shadow: $box-shadow-right;
+  box-shadow: $box-shadow-right;
 
   &__navItem{
     display: flex;
@@ -44,4 +44,7 @@
 
    }
 
+}
+.content{
+  width: 82.64vw;
 }

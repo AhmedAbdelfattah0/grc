@@ -5,9 +5,9 @@
   justify-content: space-between;
   padding: 2rem;
   background-color: $whiteColor;
-  -webkit-box-shadow: $box-shadow;
-  -moz-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow-bottom;
+  -moz-box-shadow: $box-shadow-bottom;
+  box-shadow: $box-shadow-bottom;
   @include breakpoint(sm){
     flex-direction: column;
     gap: 2rem;
@@ -31,12 +31,12 @@
       transition: background-color 0.2s ease;
       &__badge{
         position: fixed;
-        top: 43px;
+        top: 38px;
         background-color: red;
         color: white;
-        font-size: 7px;
-        left: 252px;
-        padding: 1px 4px;
+        font-size: 8px;
+        left: 253px;
+        padding: 0px 6px;
         border-radius: 50%;
         @include breakpoint(sm){
            top: 124px;

@@ -1,0 +1,79 @@
+@import '../../styles.scss';
+
+.operations-container {
+  // max-width: 70vw;
+
+  padding:2rem 2rem 0 2rem;
+  background-color: $whiteColor;
+  -webkit-box-shadow: $box-shadow-bottom;
+  -moz-box-shadow: $box-shadow-bottom;
+  box-shadow: $box-shadow-bottom;
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: right;
+    }
+
+    &__action button {
+      background: linear-gradient(180deg, #18AFB8 0%, #6E53A2 100%);
+      border: none;
+      width: Hug (82px)px;
+      height: Hug (28px)px;
+      top: 21px;
+      left: 24px;
+      padding: 6px 12px 6px 12px;
+      gap: 8px;
+      border-radius: 4px;
+      opacity: 0px;
+      color: $whiteColor;
+    }
+  }
+
+  &__metadata {
+    display: flex;
+     align-items: center;
+    gap: 1rem;
+
+    &__item {
+      width: fit-content;
+      height: 28px;
+      border-radius: 4px;
+      opacity: 0px;
+      background: #EDF9FA;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding-left: 1rem;
+      span:first-child{
+      color: #6e7690 !important;
+      }
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        text-align: right;
+
+      }
+    }
+  }
+}
+.operation-tabs-container{
+margin-top: 2rem;
+
+}
+.nav-tabs{
+  border-bottom: none;
+}
+
+.nav-tabs .active , .nav-link:hover{
+border: none;
+border-bottom: 2px solid #18AFB8;
+cursor: pointer;
+color:#18AFB8;
+}

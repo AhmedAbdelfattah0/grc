@@ -1,1 +1,84 @@
-<p>operations works!</p>
+<div class=" operations-container">
+  <div class="operations-container__section">
+    <div class="operations-container__section__title">
+      عنوان 11
+
+    </div>
+    <div class="operations-container__section__action">
+      <button>بدء العملية</button>
+    </div>
+  </div>
+
+  <div class="operations-container__metadata">
+    <div class="operations-container__metadata__item">
+      <div>
+        <img src="assets/images/profile-tick.svg" alt="">
+      </div>
+      <span>اسم المنشىء:</span>
+      <span>احمد محم</span>
+    </div>
+    <div class="operations-container__metadata__item">
+      <div>
+        <img src="assets/images/calendar.svg" alt="">
+      </div>
+      <span>السنة:</span>
+      <span>2024</span>
+    </div>
+
+    <div class="operations-container__metadata__item">
+      <div>
+        <img src="assets/images/receipt-add.svg" alt="">
+      </div>
+      <span>الاصدار:</span>
+      <span>1</span>
+    </div>
+    <div class="operations-container__metadata__item">
+      <div>
+        <img src="assets/images/calendar.svg" alt="">
+      </div>
+      <span>تاريخ الإنشاء:</span>
+      <span>1/1/2024</span>
+    </div>
+
+    <div class="operations-container__metadata__item">
+      <div>
+        <img src="assets/images/convert-3d-cube.svg" alt="">
+      </div>
+      <span>المرحلة:</span>
+      <span>فتح النظام</span>
+    </div>
+
+  </div>
+
+  <div class="operation-tabs-container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item" (click)="tapType='ADDRESS'">
+        <a class="nav-link" [ngClass]="{'active': tapType=='ADDRESS'}" aria-current="page"> <img
+            [src]="tapType=='ADDRESS'?'assets/images/document-active.svg':'assets/images/document.svg'" alt=""> تفاصيل العنوان</a>
+      </li>
+      <li class="nav-item" (click)="tapType='STANDARDS'">
+        <a class="nav-link" [ngClass]="{'active': tapType=='STANDARDS'}"> <img   [src]="tapType=='STANDARDS'?'assets/images/layer-active.svg':'assets/images/layer.svg'"    alt="">
+          المعايير</a>
+      </li>
+      <li class="nav-item" (click)="tapType='REPORTS'">
+        <a class="nav-link" [ngClass]="{'active': tapType=='REPORTS'}"> <img      [src]="tapType=='REPORTS'?'assets/images/document-active.svg':'assets/images/document.svg'" alt="">
+          التقارير</a>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
+
+<span [ngSwitch]="tapType">
+  <div *ngSwitchCase="'ADDRESS'">
+    ADDRESS
+  </div>
+  <div *ngSwitchCase="'STANDARDS'">
+    <app-standards></app-standards>
+  </div>
+  <div *ngSwitchCase="'REPORTS'">
+    REPORTS
+  </div>
+
+</span>
