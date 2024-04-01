@@ -2,19 +2,113 @@
 
 
 .standerds-container {
-  height: 50vh;
-  margin-top: 1rem;
+   margin-top: 1rem;
   padding: 2rem;
   background-color: $whiteColor;
   -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.16);
 
-  &__title {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 32px;
-    text-align: right;
-    color: #18AFB8;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: #E6F2F2;
+    padding: 1rem;
+
+    &__title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 32px;
+      text-align: right;
+      color: #18AFB8;
+
+    }
+
+
+    &__action button {
+      background: linear-gradient(180deg, #18AFB8 0%, #6E53A2 100%);
+      border: none;
+      width: Hug (82px)px;
+      height: Hug (28px)px;
+      top: 21px;
+      left: 24px;
+      padding: 6px 12px 6px 12px;
+      gap: 8px;
+      border-radius: 4px;
+      opacity: 0px;
+      color: $whiteColor;
+    }
   }
+
+
+  &__content {
+    ol {
+      color: #18AFB8;
+
+      li div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      li div>p {
+        color: #000;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: right;
+
+      }
+    }
+  }
+
+  &__action button {
+    background: linear-gradient(180deg, #18AFB8 0%, #6E53A2 100%);
+    border: none;
+    width: Hug (82px)px;
+    height: Hug (28px)px;
+    top: 21px;
+    left: 24px;
+    padding: 6px 12px 6px 12px;
+    gap: 8px;
+    border-radius: 4px;
+    opacity: 0px;
+    color: $whiteColor;
+  }
+}
+
+.success::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #F2FFF5;
+  /* Change 'red' to your desired color */
+}
+
+.success::ng-deep.mat-mdc-select-arrow svg {
+  fill: #1CAE40;
+  /* Change 'red' to your desired color */
+}
+
+.success::ng-deep.mat-mdc-select {
+  color: #1CAE40;
+  /* Change 'red' to your desired color */
+}
+
+.danger::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #FFF2F4;
+  /* Change 'red' to your desired color */
+
+}
+
+.danger::ng-deep.mat-mdc-select {
+  color: #CC334C;
+  /* Change 'red' to your desired color */
+
+}
+
+.danger::ng-deep.mat-mdc-select-arrow svg {
+  fill: #CC334C;
+  color: #CC334C;
+  /* Change 'red' to your desired color */
+
 }

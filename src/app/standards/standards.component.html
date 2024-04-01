@@ -1,12 +1,51 @@
 <div class="standerds-container">
-  <div class="standerds-container__title">
-    المتطلبات
+  <div class="standerds-container__header">
+    <span class="standerds-container__header__title">المتطلبات</span>
+    <div class="standerds-container__header__action">
+      <button (click)="openToWork=!openToWork">العمل على المعيار</button>
+    </div>
   </div>
 
   <div class="standerds-container__content">
     <ol>
-      <li> <p>أن تعتمد الخطة التنفيذية للتحول الرقمي على الخطة الاستراتيجية للتحول الرقمي في الجهة، وتهدف إلى تحديد الآليات والجداول الزمنية للتنفيذ والمتابعة</p></li>
-      <li>أن تحدد مؤشرات الأداء ونماذج التقارير الدورية اللازمة لتنفيذ المبادرات والمشاريع ومتابعة مؤشرات الأداء المتعلقة بالأهداف الاستراتيجية للتحول الرقمي</li>
+      <li>
+        <div>
+          <p>أن تعتمد الخطة التنفيذية للتحول الرقمي على الخطة الاستراتيجية للتحول الرقمي في الجهة، وتهدف إلى تحديد
+            الآليات
+            والجداول الزمنية للتنفيذ والمتابعة</p>
+
+            @if(openToWork){
+
+              <mat-form-field [ngClass]="{'danger': status1=='NO',  'success': status1=='YES' }">
+                <mat-select [(ngModel)]="status1">
+                  <mat-option value="YES">ممتثل كلي</mat-option>
+                  <mat-option value="NO">غير ممتثل</mat-option>
+                </mat-select>
+              </mat-form-field>
+            }
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>أن تحدد مؤشرات الأداء ونماذج التقارير الدورية اللازمة لتنفيذ المبادرات والمشاريع ومتابعة مؤشرات الأداء
+            المتعلقة بالأهداف الاستراتيجية للتحول الرقمي</p>
+            @if(openToWork){
+
+              <mat-form-field [ngClass]="{'danger': status2=='NO', 'success': status2=='YES'}">
+                <mat-select [(ngModel)]="status2">
+                  <mat-option value="YES">ممتثل كلي</mat-option>
+                  <mat-option value="NO">غير ممتثل</mat-option>
+                </mat-select>
+              </mat-form-field>
+            }
+        </div>
+      </li>
     </ol>
+    @if(status1 && status2){
+
+      <div class="standerds-container__action">
+        <button (click)="save()">حفظ</button>
+      </div>
+    }
   </div>
 </div>
