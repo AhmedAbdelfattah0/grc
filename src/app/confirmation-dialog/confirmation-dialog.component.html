@@ -1,8 +1,23 @@
-<h2 mat-dialog-title>Delete file</h2>
+<h2 mat-dialog-title>إتخاذ قرار</h2>
 <mat-dialog-content>
-  Would you like to delete cat.jpeg?
+  <div class="content">
+    <div>
+      <p>
+
+        يرجى اتخاذ قرار بالقبول او الرفض
+      </p>
+    </div>
+
+    <div>
+
+      <mat-radio-group  [(ngModel)]="choice" aria-label="Select an option">
+        <mat-radio-button value="1">قبول</mat-radio-button>
+        <mat-radio-button value="2">رفض</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>No</button>
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+<mat-dialog-actions  class="actions-container" >
+  <button class="action-primary" [disabled]="!choice" mat-button mat-dialog-close cdkFocusInitial [mat-dialog-close]="choice" >حفظ</button>
+  <button class="action-secondary"  mat-button mat-dialog-close>الغاء</button>
 </mat-dialog-actions>

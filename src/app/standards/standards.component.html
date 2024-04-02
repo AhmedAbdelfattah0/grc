@@ -2,7 +2,10 @@
   <div class="standerds-container__header">
     <span class="standerds-container__header__title">المتطلبات</span>
     <div class="standerds-container__header__action">
-      <button (click)="openToWork=!openToWork">العمل على المعيار</button>
+      @if(!caseClosed){
+
+        <button (click)="openToWork=!openToWork">العمل على المعيار</button>
+      }
     </div>
   </div>
 
@@ -41,7 +44,7 @@
         </div>
       </li>
     </ol>
-    @if(status1 && status2){
+    @if(status1 && status2 &&!caseClosed){
 
       <div class="standerds-container__action">
         <button (click)="save()">حفظ</button>

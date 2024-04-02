@@ -21,10 +21,20 @@ export class StandardsComponent {
   status1: string = ""
   status2: string = ""
   openToWork: boolean = false;
+  caseClosed: boolean = false;
   constructor(public dialog: MatDialog) {}
 
   save() {
-    this.dialog.open(ConfirmationDialogComponent, {
-      width: '250px'})
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '476px',height:'284px'});
+      dialogRef.afterClosed().subscribe(result => {
+        if (result == "1"){
+          this.caseClosed=true;
+        }else{
+          this.caseClosed=false;
+        }
+
+
+      });
   }
 }

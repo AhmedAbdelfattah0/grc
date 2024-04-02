@@ -1,0 +1,43 @@
+@import '../../styles.scss';
+
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions-container {
+  justify-content: center !important;
+  margin-bottom: 1rem;
+  .action-primary {
+    background: linear-gradient(180deg, #18AFB8 0%, #6E53A2 100%);
+    border: none;
+    color: $whiteColor !important;
+    width: 150px;
+    height: 48px;
+    border-radius: 8px;
+    opacity: 0px;
+
+  }
+
+  .action-secondary{
+    width: 150px;
+    height: 48px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: #F5F5FB !important;
+    color: #6C7693;
+
+  }
+}
+mat-radio-group::ng-deep.mat-mdc-radio-button.mat-mdc-radio-checked .mdc-radio__background::before{
+  background-color:#18AFB8;
+}
+mat-radio-group::ng-deep.mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:checked+.mdc-radio__background .mdc-radio__outer-circle
+{
+  border-color:#18AFB8;
+}
+mat-radio-group::ng-deep.mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled+.mdc-radio__background .mdc-radio__inner-circle{
+  border-color:#18AFB8;
+}
